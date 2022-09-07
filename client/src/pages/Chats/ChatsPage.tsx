@@ -1,10 +1,10 @@
 import MainLayout from '@/layouts/MainLayout';
 import * as React from 'react';
 
-import styles from './UsersPage.module.css';
+import styles from './ChatsPage.module.css';
 
-const UsersPage: React.FC = () => {
+const ChatsPage: React.FC = () => {
 	return <MainLayout></MainLayout>;
 };
 
-export default UsersPage;
+export default ChatsPage;

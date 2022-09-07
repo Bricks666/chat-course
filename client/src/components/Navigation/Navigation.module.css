@@ -1,0 +1,8 @@
+.wrapper {
+	display: grid;
+	row-gap: 50px;
+}
+
+.list {
+	display: contents;
+}

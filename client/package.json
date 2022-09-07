@@ -4,6 +4,7 @@
 	"private": true,
 	"dependencies": {
 		"axios": "^0.27.2",
+		"classnames": "^2.3.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-router-dom": "^6.3.0",
@@ -11,12 +12,13 @@
 		"typescript": "^4.8.2"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"start": "react-app-rewired start",
+		"build": "react-app-rewired build",
 		"gen:component": "generate-react component",
 		"gen:page": "generate-react component --type=page",
 		"gen:context": "generate-react component --type=context",
-		"gen:hook": "generate-react component --type=hook"
+		"gen:hook": "generate-react component --type=hook",
+		"gen:css-types": "tcm src"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -40,6 +42,9 @@
 		"@types/react": "^18.0.18",
 		"@types/react-dom": "^18.0.6",
 		"@types/react-router-dom": "^5.3.3",
-		"generate-react-cli": "^7.3.0"
+		"generate-react-cli": "^7.3.0",
+		"react-app-rewired": "^2.2.1",
+		"tsconfig-paths-webpack-plugin": "^4.0.0",
+		"typed-css-modules": "^0.7.2"
 	}
 }

@@ -1,0 +1,10 @@
+:root {
+	--color-key: #0d1c2e;
+	--color-primary: #2a8bf2;
+	--color-primary-light: #7cb8f7;
+	--color-secondary: #ff3366;
+	--color-third: #707c97;
+	--color-invert-key: #fafbff;
+
+	--gradient: linear-gradient(92.68deg, 0%, var(--color-primary) 100%);
+}
