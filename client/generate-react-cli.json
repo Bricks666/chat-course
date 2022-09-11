@@ -45,16 +45,16 @@
 			"withIndex": true,
 			"withProvider": true,
 			"withTypes": true
-		}
-	},
-	"hook": {
-		"customTemplates": {
-			"component": "templates/hook/useTemplateName.ts"
 		},
-		"path": "src/hooks",
-		"withStyle": false,
-		"withTest": false,
-		"withStory": false,
-		"withLazy": false
+		"hook": {
+			"customTemplates": {
+				"component": "templates/hook/useTemplateName.ts"
+			},
+			"path": "src/hooks",
+			"withStyle": false,
+			"withTest": false,
+			"withStory": false,
+			"withLazy": false
+		}
 	}
 }

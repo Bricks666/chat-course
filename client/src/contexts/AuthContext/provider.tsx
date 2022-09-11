@@ -1,24 +1,25 @@
 import * as React from 'react';
-import { TemplateName } from './context';
-import { Type } from './types';
+import { AuthContext } from './context';
+import { Auth } from './types';
 import { QueryContextValue_LEGACY } from '@/packages/QueryContext';
+import { getAuthApi } from '@/api';
 
-export interface TemplateNameProviderProps {}
+export interface AuthContextProviderProps {}
 
-export const TemplateNameProvider: React.FC<
-	React.PropsWithChildren<TemplateNameProviderProps>
+export const AuthContextProvider: React.FC<
+	React.PropsWithChildren<AuthContextProviderProps>
 > = (props) => {
 	const { children } = props;
 
 	const [isLoading, setIsLoading] = React.useState<boolean>(false);
 	const [isSuccess, setIsSuccess] = React.useState<boolean>(false);
 	const [isError, setIsError] = React.useState<boolean>(false);
-	const [data, setData] = React.useState<Type[]>([]);
+	const [data, setData] = React.useState<Auth>();
 
 	const fetch = React.useCallback(async () => {
 		setIsLoading(true);
 		try {
-			const data = await [];
+			const data = await getAuthApi();
 			setData(data);
 			setIsSuccess(true);
 		} catch {
@@ -28,14 +29,12 @@ export const TemplateNameProvider: React.FC<
 		}
 	}, []);
 
-	const value: QueryContextValue_LEGACY<Type[], typeof fetch> = {
+	const value: QueryContextValue_LEGACY<Auth, typeof fetch> = {
 		isLoading,
 		isSuccess,
 		isError,
 		data,
-    fetch
+		fetch,
 	};
-	return (
-		<TemplateName.Provider value={value}>{children}</TemplateName.Provider>
-	);
+	return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

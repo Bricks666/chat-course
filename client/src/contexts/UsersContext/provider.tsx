@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { UsersContext } from './context';
 import { User } from './types';
-import { QueryContextValue } from '@/packages/QueryContext';
+import { QueryContextValue_LEGACY } from '@/packages/QueryContext';
 
 export interface UsersContextProviderProps {}
 
@@ -38,7 +38,7 @@ export const UsersContextProvider: React.FC<
 		};
 	}, []);
 
-	const value: QueryContextValue<User[]> = {
+	const value: QueryContextValue_LEGACY<User[]> = {
 		isLoading,
 		isSuccess,
 		isError,
