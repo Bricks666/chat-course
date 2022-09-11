@@ -1,0 +1,28 @@
+.wrapper {
+	display: grid;
+	row-gap: 15px;
+
+	border-radius: 6px;
+}
+
+.link {
+	display: contents;
+
+	background-color: var(--color-invert-key);
+}
+
+.link-active {
+	background-image: var(--gradient);
+}
+
+.info {
+	display: grid;
+	grid-template-rows: repeat(2, max-content);
+	grid-template-columns: max-content 1fr max-content;
+	column-gap: 20px;
+	row-gap: 6px;
+}
+
+.image {
+	grid-row: span 2;
+}

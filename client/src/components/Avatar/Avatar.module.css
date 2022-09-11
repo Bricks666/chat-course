@@ -1,0 +1,18 @@
+.image {
+	width: var(--avatar-size);
+	height: var(--avatar-size);
+
+	border-radius: 50%;
+	border: 5px solid var(--color-invert-key);
+}
+
+.small {
+	--avatar-size: 36px;
+}
+
+.medium {
+	--avatar-size: 54px;
+}
+.large {
+	--avatar-size: 86px;
+}

@@ -4,6 +4,7 @@ import { CommonProps } from '@/interfaces/common';
 import { useQuery } from '@/packages/QueryContext';
 import { getAuthApi } from '@/api';
 import { Text } from '../Text';
+import { Avatar } from '../Avatar';
 
 import styles from './AsideUserInfo.module.css';
 
@@ -15,8 +16,9 @@ export const AsideUserInfo: React.FC<AsideUserInfoProps> = React.memo(
 		const { data } = useQuery('/auth', getAuthApi);
 		return (
 			<section className={classNames(styles.wrapper, className)}>
-				<img
+				<Avatar
 					className={styles.image}
+					size='large'
 					src={data?.photo}
 					alt={`${data?.name} avatar`}
 				/>

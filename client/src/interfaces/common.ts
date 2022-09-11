@@ -1,5 +1,5 @@
 export interface CommonProps {
-	readonly className?: string;
+	className?: string;
 }
 
 export type AnyFunction = (...args: any[]) => any;
