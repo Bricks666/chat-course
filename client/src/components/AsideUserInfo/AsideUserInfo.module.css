@@ -1,0 +1,21 @@
+.wrapper {
+	display: grid;
+	row-gap: 6px;
+  justify-items: center;
+}
+
+.image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 90px;
+	height: 90px;
+
+	border-radius: 50%;
+  border: 5px solid var(--color-invert-key);
+}
+
+.name {
+  font-weight: 400;
+}

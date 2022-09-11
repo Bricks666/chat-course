@@ -6,6 +6,13 @@ export type Key = string | Array<string | number>;
 
 export type Fetcher<R> = () => Promise<R>;
 
+const defaultValue: QueryInformation<any> = {
+	isError: false,
+	isLoading: false,
+	isSuccess: false,
+	data: undefined,
+};
+
 const useQuery = <R>(
 	queryKey: Key,
 	queryFn: Fetcher<R>
@@ -46,7 +53,13 @@ const useQuery = <R>(
 		request();
 	}, [key, queryFn, setValue]);
 
-	return info;
+	React.useEffect(() => {
+		if (!info) {
+			setValue(key, defaultValue);
+		}
+	}, [key]);
+
+	return info || defaultValue;
 };
 
 export default useQuery;

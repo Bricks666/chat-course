@@ -20,13 +20,33 @@ p {
 }
 
 img {
+	width: 100%;
+	height: auto;
+
 	object-fit: cover;
 	object-position: center;
 }
 
 a {
+	display: inline-block;
+
 	text-decoration: none;
 	color: inherit;
 
-  outline: none;
+	outline: none;
+}
+
+button {
+	display: inline-block;
+
+	border: 0;
+	border-radius: 0;
+
+	background-color: transparent;
+
+  cursor: pointer;
+}
+
+button:hover {
+	background-color: inherit;
 }

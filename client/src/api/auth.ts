@@ -1,4 +1,4 @@
-import { Auth } from '@/contexts/AuthContext';
+import { Auth } from '@/models/auth';
 
 export const getAuthApi = async (): Promise<Auth> => {
 	return Promise.resolve({

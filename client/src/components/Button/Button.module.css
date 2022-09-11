@@ -1,1 +1,25 @@
-.wrapper {}
+.button {
+  width: max-content;
+
+	padding: 18px 25px;
+
+  transition: color 200ms ease-in-out;
+}
+
+.gradient {
+	color: var(--color-invert-key);
+
+	background-image: var(--gradient);
+}
+
+
+.mono {
+	text-transform: uppercase;
+	color: var(--color-third);
+  font-weight: 700;
+}
+
+
+.mono:hover {
+  color: var(--key)
+}
