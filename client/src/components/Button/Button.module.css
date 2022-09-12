@@ -1,12 +1,14 @@
 .button {
 	width: max-content;
-  height: max-content;
+	height: max-content;
 
 	padding: 18px 25px;
 
-	transition: color 200ms ease-in-out;
+	font-weight: 500;
 
 	border-radius: 6px;
+
+	transition: color 200ms ease-in-out;
 }
 
 .gradient {
@@ -29,7 +31,6 @@
 .mono {
 	text-transform: uppercase;
 	color: var(--color-third);
-	font-weight: 700;
 }
 
 .mono:hover {
