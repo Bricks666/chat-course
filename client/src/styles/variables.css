@@ -6,5 +6,9 @@
 	--color-third: #707c97;
 	--color-invert-key: #fafbff;
 
-	--gradient: linear-gradient(92.68deg, 0%, var(--color-primary) 100%);
+	--gradient: linear-gradient(
+		96.78deg,
+		var(--color-primary-light) 0%,
+		var(--color-primary) 100%
+	);
 }

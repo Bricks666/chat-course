@@ -13,13 +13,15 @@ export interface ChatsProps extends CommonProps {}
 export const Chats: React.FC<ChatsProps> = React.memo((props) => {
 	const { className } = props;
 	return (
-		<section className={className}>
+		<section className={classNames(styles.wrapper, className)}>
 			<Text variant='h1' tag='h2'>
 				Chats
 			</Text>
-			<Button buttonType='gradient'>Create new Chat</Button>
-			<SearchChat />
-			<ChatsList />
+			<Button className={styles.button} buttonType='gradient'>
+				Create new Chat
+			</Button>
+			<SearchChat className={styles.search} />
+			<ChatsList className={styles.list} />
 		</section>
 	);
 });

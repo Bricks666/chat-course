@@ -1,25 +1,37 @@
 .button {
-  width: max-content;
+	width: max-content;
+  height: max-content;
 
 	padding: 18px 25px;
 
-  transition: color 200ms ease-in-out;
+	transition: color 200ms ease-in-out;
+
+	border-radius: 6px;
 }
 
 .gradient {
 	color: var(--color-invert-key);
 
 	background-image: var(--gradient);
+	background-color: var(--color-primary);
+
+	box-shadow: 6px 6px 25px rgba(42, 139, 242, 0.15),
+		4px 4px 25px rgba(42, 139, 242, 0.05),
+		10px 6px 25px rgba(42, 139, 242, 0.15);
+
+	transition: background 200ms ease-in-out;
 }
 
+.gradient:hover {
+	background-image: none;
+}
 
 .mono {
 	text-transform: uppercase;
 	color: var(--color-third);
-  font-weight: 700;
+	font-weight: 700;
 }
 
-
 .mono:hover {
-  color: var(--key)
+	color: var(--key);
 }

@@ -14,7 +14,10 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul,
+ol,
+li {
 	margin: 0;
 	padding: 0;
 }
@@ -44,9 +47,17 @@ button {
 
 	background-color: transparent;
 
-  cursor: pointer;
+	cursor: pointer;
 }
 
-button:hover {
-	background-color: inherit;
+input {
+	border: none;
+	border-radius: 0;
+
+	outline: none;
+}
+
+ul,
+ol {
+	list-style: none;
 }

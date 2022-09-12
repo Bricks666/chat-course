@@ -1,8 +1,6 @@
+import { mockAuth } from '@/mocks/auth';
 import { Auth } from '@/models/auth';
 
 export const getAuthApi = async (): Promise<Auth> => {
-	return Promise.resolve({
-		id: 0,
-		name: 'Test user name',
-	});
+	return Promise.resolve(mockAuth);
 };

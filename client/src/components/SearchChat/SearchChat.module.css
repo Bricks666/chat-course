@@ -1,0 +1,15 @@
+.search {
+	position: relative;
+
+	padding-left: 75px;
+}
+
+.search::before {
+	content: '';
+
+	position: absolute;
+	top: 50%;
+	left: 40px;
+
+	transform: translateY(-50%);
+}

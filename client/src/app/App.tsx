@@ -1,18 +1,14 @@
 import * as React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { routes } from '@/routes';
+import { BrowserRouter } from 'react-router-dom';
 import { QueryProvider } from '@/packages/QueryContext';
+import { AppRoutes } from '@/components/AppRoutes';
 
 const App: React.FC = () => {
 	return (
 		<BrowserRouter>
 			<QueryProvider>
 				<React.Suspense fallback={'Loading...'}>
-					<Routes>
-						{routes.map(({ Component, path }) => (
-							<Route path={path} element={<Component />} key={path} />
-						))}
-					</Routes>
+					<AppRoutes />
 				</React.Suspense>
 			</QueryProvider>
 		</BrowserRouter>

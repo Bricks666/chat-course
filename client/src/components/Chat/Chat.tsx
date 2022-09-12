@@ -18,30 +18,38 @@ export const Chat: React.FC<ChatProps> = React.memo((props) => {
 		lastActivityTime,
 		lastMessage,
 		companionPhoto,
+		newMessageCount,
 	} = props;
 	return (
-		<article className={classNames(styles.wrapper, className)}>
-			<NavLink
-				className={({ isActive }) =>
-					classNames(styles.link, { [styles['link-active']]: isActive })
-				}
-				to={`${id}`}
-			>
+		<NavLink
+			className={({ isActive }) =>
+				classNames(styles.link, { [styles['link-active']]: isActive })
+			}
+			to={`${id}`}
+		>
+			<article className={classNames(styles.wrapper, className)}>
 				<div className={styles.info}>
 					<Avatar
 						className={styles.image}
 						src={companionPhoto}
 						alt={companionName}
 					/>
-					<Text variant='h3'>{companionName}</Text>
+					<Text className={styles.name} variant='h3'>{companionName}</Text>
 					<Text tag='span'>
 						<time dateTime={lastActivityTime}>{lastActivityTime}</time>
 					</Text>
 				</div>
-				<div>
-					<Text variant='p'>{lastMessage}</Text>
+				<div className={styles['message-wrapper']}>
+					<Text className={styles.message} variant='p'>
+						{lastMessage}
+					</Text>
+					{!!newMessageCount && (
+						<span className={styles['new-message-count']}>
+							{newMessageCount}
+						</span>
+					)}
 				</div>
-			</NavLink>
-		</article>
+			</article>
+		</NavLink>
 	);
 });

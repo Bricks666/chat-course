@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '@/interfaces/common';
 import { useQuery } from '@/packages/QueryContext';
-import { getAuthApi } from '@/api';
+import { getAuthApi } from '@/api/auth';
 import { Text } from '../Text';
 import { Avatar } from '../Avatar';
 

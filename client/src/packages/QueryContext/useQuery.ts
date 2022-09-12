@@ -57,6 +57,7 @@ const useQuery = <R>(
 		if (!info) {
 			setValue(key, defaultValue);
 		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [key]);
 
 	return info || defaultValue;
