@@ -51,7 +51,7 @@ const useQuery = <R>(
 			}
 		};
 		request();
-	}, [key, queryFn, setValue]);
+	}, [key, setValue]);
 
 	React.useEffect(() => {
 		if (!info) {

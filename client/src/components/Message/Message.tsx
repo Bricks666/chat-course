@@ -25,7 +25,7 @@ export const Message: React.FC<MessageProps> = React.memo((props) => {
 			{!isAuthUser && (
 				<Avatar src={senderPhoto} alt={senderName} size='small' />
 			)}
-			<Text className={styles.text}>{content}</Text>
+			<Text className={styles.content}>{content}</Text>
 			<time className={styles.time} dateTime={sendedAt}>
 				{sendedAt}
 			</time>

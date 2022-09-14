@@ -1,0 +1,28 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	column-gap: 22px;
+	row-gap: 6px;
+}
+
+.image {
+	grid-row: span 2;
+
+	border: 0;
+
+	background-color: var(--user-chat-info-image-color);
+
+	transition: background-color 200ms ease-in-out;
+}
+
+.name {
+	color: var(--user-chat-info-name-color, var(--color-third));
+
+	transition: color 200ms ease-in-out;
+}
+
+.action {
+	color: var(--user-chat-info-action-color, var(--color-primary));
+
+	transition: color 200ms ease-in-out;
+}

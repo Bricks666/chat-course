@@ -1,0 +1,19 @@
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+
+	padding: 28px 60px;
+	padding-right: 38px;
+
+	background-color: var(--color-invert-key);
+
+	border-radius: 6px 6px 0px 0px;
+	border-bottom: 2px solid rgba(112, 124, 151, 0.1);
+}
+
+.info {
+	--user-chat-info-image-color: var(--color-primary);
+}
+
+.buttons {
+}

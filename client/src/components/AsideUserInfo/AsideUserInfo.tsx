@@ -13,7 +13,7 @@ export interface AsideUserInfoProps extends CommonProps {}
 export const AsideUserInfo: React.FC<AsideUserInfoProps> = React.memo(
 	(props) => {
 		const { className } = props;
-		const { data } = useQuery('/auth', getAuthApi);
+		const { data } = useQuery('auth', getAuthApi);
 		return (
 			<section className={classNames(styles.wrapper, className)}>
 				<Avatar

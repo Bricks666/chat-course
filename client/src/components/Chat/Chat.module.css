@@ -36,41 +36,30 @@
 }
 
 .info {
-	display: grid;
-	grid-template-rows: repeat(2, max-content);
-	grid-template-columns: max-content 1fr max-content;
-	column-gap: 20px;
-	row-gap: 6px;
+	display: flex;
+	justify-content: space-between;
+
+	--user-chat-info-image-color: var(--color-primary);
 }
 
-.name {
-	color: var(--color-key);
-}
-
-.image {
-	grid-row: span 2;
-
-	border: none;
-
-	transition: background-color 200ms ease-in-out;
-}
-
-.link-active .image,
-.link:hover .image,
-.link:focus-visible .image {
-	background-color: var(--color-invert-key);
+.link-active .info,
+.link:hover .info,
+.link:focus-visible .info {
+	--user-chat-info-image-color: var(--color-invert-key);
+	--user-chat-info-name-color: var(--color-invert-key);
+	--user-chat-info-action-color: var(--color-invert-key);
 }
 
 .message-wrapper {
 	position: relative;
+
+	max-height: 80px;
+
+	overflow: hidden;
 }
 
 .message {
-	max-height: 80px;
-
 	line-height: 1.3em;
-
-	overflow: hidden;
 }
 
 .new-message-count {

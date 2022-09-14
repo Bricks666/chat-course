@@ -1,0 +1,19 @@
+.list {
+	max-height: 100%;
+
+	padding-right: 40px;
+
+	overflow: scroll;
+}
+
+.message {
+	margin-bottom: 15px;
+}
+
+.message:last-child {
+	margin-bottom: 0;
+}
+
+.auth-message {
+	margin-left: auto;
+}

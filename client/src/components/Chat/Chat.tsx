@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 import { CommonProps } from '@/interfaces/common';
 import { Chat as ChatModel } from '@/models/chat';
-import { Avatar } from '../Avatar';
 import { Text } from '../Text';
+import { UserChatInfo } from '../UserChatInfo';
 
 import styles from './Chat.module.css';
 
@@ -29,12 +29,7 @@ export const Chat: React.FC<ChatProps> = React.memo((props) => {
 		>
 			<article className={classNames(styles.wrapper, className)}>
 				<div className={styles.info}>
-					<Avatar
-						className={styles.image}
-						src={companionPhoto}
-						alt={companionName}
-					/>
-					<Text className={styles.name} variant='h3'>{companionName}</Text>
+					<UserChatInfo userName={companionName} userPhoto={companionPhoto} />
 					<Text tag='span'>
 						<time dateTime={lastActivityTime}>{lastActivityTime}</time>
 					</Text>
