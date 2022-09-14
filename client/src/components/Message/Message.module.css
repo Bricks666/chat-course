@@ -1,0 +1,41 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: max-content 1fr max-content;
+	grid-template-areas: 'avatar content options' '. time .';
+	column-gap: 24px;
+  row-gap: 5px;
+
+	max-width: 622px;
+  width: max-content
+}
+
+.wrapper-sender {
+	grid-template-columns: max-content 1fr;
+	grid-template-areas: 'options content' '. time';
+}
+
+.avatar {
+	grid-area: avatar;
+}
+
+.content {
+	grid-area: content;
+
+	padding: 14px 25px 25px;
+
+	border-radius: 10px;
+	border-top-left-radius: 0;
+}
+
+.wrapper-sender .content {
+	border-radius: 10px;
+	border-top-right-radius: 0;
+}
+
+.time {
+	grid-area: time;
+
+	font-size: 14px;
+	color: var(--color-third);
+	text-transform: uppercase;
+}

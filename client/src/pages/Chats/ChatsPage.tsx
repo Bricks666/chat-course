@@ -8,7 +8,7 @@ import styles from './ChatsPage.module.css';
 const ChatsPage: React.FC = () => {
 	return (
 		<MainLayout className={styles.wrapper}>
-			<Chats />
+			<Chats className={styles.chats} />
 			<Outlet />
 		</MainLayout>
 	);
