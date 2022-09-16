@@ -1,21 +1,39 @@
 .wrapper {
-	display: grid;
-	row-gap: 20px;
-	grid-template-columns: 1fr max-content;
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: 1fr max-content;
   grid-template-rows: max-content max-content 1fr;
+
+  padding: 0 15px 10px;
+
+  overflow-y: scroll;
 }
 
 .button {
-	text-transform: capitalize;
-	font-size: 20px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.scrollable {
+  grid-column: span 2;
+
+  display: grid;
+  row-gap: 20px;
+
+  max-height: max(600px, 100%);
+
+  overflow-y: scroll;
 }
 
 .search {
-	grid-column: span 2;
+  grid-column: span 2;
 
-	width: 100%;
+  width: 100%;
 }
 
 .list {
-	grid-column: span 2;
+  grid-column: span 2;
+
+  position: relative;
+  z-index: 1;
 }
