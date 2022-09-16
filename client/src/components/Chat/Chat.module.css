@@ -1,83 +1,84 @@
 .link {
-	--message-text-color: var(--color-third);
+  --message-text-color: var(--color-third);
 
-	display: block;
+  display: block;
 
-	background-color: var(--color-invert-key);
+  background-color: var(--color-invert-key);
 
-	color: var(--message-text-color);
-	font-weight: 500;
+  color: var(--message-text-color);
+  font-weight: 500;
 
-	border-radius: 6px;
+  border-radius: 6px;
 
-	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.05), 0px 2px 15px rgba(0, 0, 0, 0.1),
-		0px 2px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 8px 15px rgb(42 39 242 / 7%);
 
-	transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  transition: color 200ms ease-in-out, box-shadow 200ms ease-in-out;
 }
 
 .link:hover,
-.link:focus-visible,
+.link:focus-visible {
+  box-shadow: 0px 8px 15px rgb(42 39 242 / 20%);
+}
 .link-active {
-	--message-text-color: var(--color-invert-key);
+  --message-text-color: var(--color-invert-key);
 
-	background-color: var(--color-primary);
+  background-image: var(--gradient);
+
+  box-shadow: 0px 8px 15px rgb(42 39 242 / 20%);
 }
 
 .wrapper {
-	display: grid;
-	row-gap: 15px;
-	grid-template-rows: max-content 1fr;
+  display: grid;
+  row-gap: 15px;
+  grid-template-rows: max-content 1fr;
 
-	width: 100%;
-	min-height: 200px;
+  width: 100%;
+  min-height: 200px;
 
-	padding: 30px 40px 40px;
+  padding: 30px 40px 40px;
 }
 
 .info {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-	--user-chat-info-image-color: var(--color-primary);
+  --user-chat-info-image-color: var(--color-primary);
 }
 
-.link-active .info,
-.link:hover .info,
-.link:focus-visible .info {
-	--user-chat-info-image-color: var(--color-invert-key);
-	--user-chat-info-name-color: var(--color-invert-key);
-	--user-chat-info-action-color: var(--color-invert-key);
+.link-active .info {
+  --user-chat-info-image-color: var(--color-invert-key);
+  --user-chat-info-name-color: var(--color-key);
+  --user-chat-info-action-color: var(--color-invert-key);
 }
 
 .message-wrapper {
-	position: relative;
+  position: relative;
 
-	max-height: 80px;
+  max-height: 80px;
 
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .message {
-	line-height: 1.3em;
+  line-height: 1.3em;
 }
 
 .new-message-count {
-	position: absolute;
-	right: 0;
-	top: 10px;
+  position: absolute;
+  right: 0;
+  top: 10px;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-	min-width: 20px;
-	min-height: 20px;
+  min-width: 20px;
+  min-height: 20px;
 
-	color: var(--color-invert-key);
-	font-size: 13px;
+  color: var(--color-invert-key);
+  font-size: 13px;
 
-	background-color: var(--color-secondary);
+  background-color: var(--color-secondary);
 
-	border-radius: 50%;
+  border-radius: 50%;
 }
