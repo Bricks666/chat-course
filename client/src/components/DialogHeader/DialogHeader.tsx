@@ -2,16 +2,18 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { Navigate } from 'react-router-dom';
 import { CommonProps } from '@/interfaces/common';
-import { useQuery } from '@/packages/QueryContext';
+import { useQuery } from '@/packages/Query';
 import { getChatApi } from '@/api/chats';
-import { Button } from '../Button';
 import { UserChatInfo } from '../UserChatInfo';
 import { Text } from '../Text';
+import { IconButton } from '../IconButton';
+import { AttachIcon } from '../AttachIcon';
+import { MoreVerticalIcon } from '../MoreVerticalIcon';
 
 import styles from './DialogHeader.module.css';
 
 export interface DialogHeaderProps extends CommonProps {
-  readonly chatId: number;
+	readonly chatId: number;
 }
 
 export const DialogHeader: React.FC<DialogHeaderProps> = React.memo((props) => {
@@ -37,8 +39,12 @@ export const DialogHeader: React.FC<DialogHeaderProps> = React.memo((props) => {
 				userPhoto={data!.companionPhoto}
 			/>
 			<div className={styles.buttons}>
-				<Button buttonType='mono'></Button>
-				<Button buttonType='mono'></Button>
+				<IconButton buttonType='mono'>
+					<AttachIcon />
+				</IconButton>
+				<IconButton buttonType='mono'>
+					<MoreVerticalIcon />
+				</IconButton>
 			</div>
 		</header>
 	);

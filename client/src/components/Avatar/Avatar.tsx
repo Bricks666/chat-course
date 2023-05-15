@@ -1,7 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { CommonProps } from '@/interfaces/common';
-import { Size } from './types';
+import { CommonProps, Size } from '@/interfaces/common';
 
 import styles from './Avatar.module.css';
 

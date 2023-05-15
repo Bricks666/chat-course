@@ -5,7 +5,7 @@ import {
   Model,
   Table,
 } from 'sequelize-typescript';
-import { Chat } from '@/chats/models/chat.model';
+import { User } from '@/users/models/user.model';
 
 @Table({
   tableName: 'messages',
@@ -19,9 +19,28 @@ export class Message extends Model<Message> {
   })
   declare messageId: number;
 
-  @ForeignKey(() => Chat)
   @Column({
-    type: DataType.NUMBER,
+    type: DataType.INTEGER,
+    primaryKey: true,
   })
-  declare chatId: number;
+  @ForeignKey(() => User)
+  declare senderId: number;
+
+  @Column({
+    type: DataType.INTEGER,
+    primaryKey: true,
+  })
+  @ForeignKey(() => User)
+  declare receiverId: number;
+
+  @Column({
+    type: DataType.STRING,
+  })
+  declare content: string;
+
+  @Column({
+    type: DataType.BOOLEAN,
+    defaultValue: false,
+  })
+  declare isViewed: boolean;
 }

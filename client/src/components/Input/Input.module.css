@@ -1,5 +1,5 @@
 .input {
-  height: max-content;
+	height: max-content;
 
 	padding: 22px;
 
@@ -11,16 +11,21 @@
 
 	background-color: var(--color-invert-key);
 
-	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.05),
-		0px 2px 15px rgba(0, 0, 0, 0.1), 0px 2px 15px rgba(0, 0, 0, 0.05);
+	box-shadow: var(--shadow);
+
+	transition: box-shadow 200ms ease-in-out;
 }
 
+.input:hover,
+.input:focus {
+	box-shadow: var(--shadow-active);
+}
 
 .input::placeholder {
-  font-size: 18px;
-  line-height: 1.5em;
-  color: inherit;
-  font-weight: 500;
+	font-size: 18px;
+	line-height: 1.5em;
+	color: inherit;
+	font-weight: 500;
 
-  opacity: 1;
+	opacity: 1;
 }

@@ -1,0 +1,22 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: var(--icon-button-size);
+	height: var(--icon-button-size);
+
+	border-radius: 50%;
+}
+
+.small {
+	--icon-button-size: 24px;
+}
+
+.medium {
+	--icon-button-size: 40px;
+}
+
+.large {
+	--icon-button-size: 52px;
+}

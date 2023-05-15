@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { QueryProvider } from '@/packages/QueryContext';
+import { QueryProvider } from '@/packages/Query';
 import { AppRoutes } from '@/components/AppRoutes';
 
 const App: React.FC = () => {

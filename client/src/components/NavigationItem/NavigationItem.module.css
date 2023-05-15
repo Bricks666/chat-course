@@ -1,6 +1,10 @@
 .link {
 	position: relative;
 
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
 	padding-left: 35px;
 
 	color: var(--color-third);

@@ -1,74 +1,16 @@
+import { faker } from '@faker-js/faker';
 import { Message } from '@/models/message';
+import { mockAuth } from './auth';
 
-export const mockMessages: Message[] = [
-	{
-		id: 0,
-		content: 'asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb',
-		sendedAt: new Date().toLocaleDateString(),
-		senderId: 0,
-		senderName: 'Test user name',
-	},
-	{
-		id: 0,
-		content: 'asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb',
-		sendedAt: new Date().toLocaleDateString(),
-		senderId: 1,
-		senderName: 'Test user name',
-	},
-  {
-		id: 0,
-		content: 'asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb',
-		sendedAt: new Date().toLocaleDateString(),
-		senderId: 0,
-		senderName: 'Test user name',
-	},
-	{
-		id: 0,
-		content: 'asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb',
-		sendedAt: new Date().toLocaleDateString(),
-		senderId: 1,
-		senderName: 'Test user name',
-	},
-  {
-		id: 0,
-		content: 'asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb',
-		sendedAt: new Date().toLocaleDateString(),
-		senderId: 0,
-		senderName: 'Test user name',
-	},
-	{
-		id: 0,
-		content: 'asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb',
-		sendedAt: new Date().toLocaleDateString(),
-		senderId: 1,
-		senderName: 'Test user name',
-	},
-  {
-		id: 0,
-		content: 'asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb',
-		sendedAt: new Date().toLocaleDateString(),
-		senderId: 0,
-		senderName: 'Test user name',
-	},
-	{
-		id: 0,
-		content: 'asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb',
-		sendedAt: new Date().toLocaleDateString(),
-		senderId: 1,
-		senderName: 'Test user name',
-	},
-  {
-		id: 0,
-		content: 'asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb',
-		sendedAt: new Date().toLocaleDateString(),
-		senderId: 0,
-		senderName: 'Test user name',
-	},
-	{
-		id: 0,
-		content: 'asdkjbasdfhbasdffhklbasd asdhb adhb adfhbadjhb',
-		sendedAt: new Date().toLocaleDateString(),
-		senderId: 1,
-		senderName: 'Test user name',
-	},
-];
+export const getMockMessages = (chatId: number): Message[] =>
+	new Array(+faker.random.numeric(2)).fill(0).map(() => ({
+		id: +faker.random.numeric(2),
+		content: faker.hacker.phrase(),
+		sendedAt: faker.date.past(2022).toLocaleDateString(),
+		senderId: faker.helpers.arrayElement([chatId, mockAuth.id]),
+		senderName: faker.internet.userName(),
+		senderPhoto: faker.helpers.arrayElement([
+			undefined,
+			faker.internet.avatar(),
+		]),
+	}));

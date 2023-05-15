@@ -11,7 +11,7 @@ export interface NavigationItemProps extends CommonProps, NavItem {}
 
 export const NavigationItem: React.FC<NavigationItemProps> = React.memo(
 	(props) => {
-		const { className, href, label } = props;
+		const { className, href, label, Icon } = props;
 		return (
 			<li className={className}>
 				<Text variant='p' tag='span'>
@@ -21,6 +21,7 @@ export const NavigationItem: React.FC<NavigationItemProps> = React.memo(
 						}
 						to={href}
 					>
+						{<Icon />}
 						{label}
 					</NavLink>
 				</Text>

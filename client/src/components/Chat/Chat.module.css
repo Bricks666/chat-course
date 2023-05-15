@@ -10,21 +10,21 @@
 
   border-radius: 6px;
 
-  box-shadow: 0px 8px 15px rgb(42 39 242 / 7%);
+  box-shadow: var(--shadow);
 
   transition: color 200ms ease-in-out, box-shadow 200ms ease-in-out;
 }
 
 .link:hover,
 .link:focus-visible {
-  box-shadow: 0px 8px 15px rgb(42 39 242 / 20%);
+  box-shadow: var(--shadow-active);
 }
 .link-active {
   --message-text-color: var(--color-invert-key);
 
   background-image: var(--gradient);
 
-  box-shadow: 0px 8px 15px rgb(42 39 242 / 20%);
+  box-shadow: var(--shadow-active);
 }
 
 .wrapper {

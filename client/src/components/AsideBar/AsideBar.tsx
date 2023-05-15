@@ -6,6 +6,7 @@ import { AsideUserInfo } from '../AsideUserInfo';
 import { Button } from '../Button';
 
 import styles from './AsideBar.module.css';
+import { PowerIcon } from '../PowerIcon';
 
 export interface AsideBarProps extends CommonProps {}
 
@@ -16,6 +17,7 @@ export const AsideBar: React.FC<AsideBarProps> = React.memo((props) => {
 			<AsideUserInfo className={styles['user-info']} />
 			<Navigation />
 			<Button className={styles.button} buttonType='mono' onClick={console.log}>
+				<PowerIcon />
 				Logout
 			</Button>
 		</aside>

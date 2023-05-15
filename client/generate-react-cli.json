@@ -29,32 +29,6 @@
 			"withStory": false,
 			"withLazy": false,
 			"withIndex": true
-		},
-		"context": {
-			"customTemplates": {
-				"component": "templates/context/context.ts",
-				"provider": "templates/context/provider.tsx",
-				"types": "templates/context/types.ts",
-				"index": "templates/context/index.ts"
-			},
-			"path": "src/contexts",
-			"withStyle": false,
-			"withTest": false,
-			"withStory": false,
-			"withLazy": false,
-			"withIndex": true,
-			"withProvider": true,
-			"withTypes": true
-		},
-		"hook": {
-			"customTemplates": {
-				"component": "templates/hook/useTemplateName.ts"
-			},
-			"path": "src/hooks",
-			"withStyle": false,
-			"withTest": false,
-			"withStory": false,
-			"withLazy": false
 		}
 	}
 }

@@ -9,15 +9,13 @@
 		"react-dom": "^18.2.0",
 		"react-router-dom": "^6.3.0",
 		"react-scripts": "5.0.1",
-		"typescript": "^4.8.2"
+		"socket.io-client": "^4.5.2"
 	},
 	"scripts": {
 		"start": "react-app-rewired start",
 		"build": "react-app-rewired build",
 		"gen:component": "generate-react component",
 		"gen:page": "generate-react component --type=page",
-		"gen:context": "generate-react component --type=context",
-		"gen:hook": "generate-react component --type=hook",
 		"gen:css-types": "tcm src"
 	},
 	"eslintConfig": {
@@ -38,6 +36,7 @@
 		]
 	},
 	"devDependencies": {
+		"@faker-js/faker": "^7.5.0",
 		"@types/node": "^17.0.45",
 		"@types/react": "^18.0.18",
 		"@types/react-dom": "^18.0.6",
@@ -45,6 +44,7 @@
 		"generate-react-cli": "^7.3.0",
 		"react-app-rewired": "^2.2.1",
 		"tsconfig-paths-webpack-plugin": "^4.0.0",
-		"typed-css-modules": "^0.7.2"
+		"typed-css-modules": "^0.7.2",
+		"typescript": "^4.8.2"
 	}
 }

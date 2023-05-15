@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '@/interfaces/common';
-import { useQuery } from '@/packages/QueryContext';
+import { useQuery } from '@/packages/Query';
 import { getChatsApi } from '@/api/chats';
 import { Chat } from '../Chat';
 

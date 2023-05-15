@@ -1,0 +1,10 @@
+.svg {
+	display: inline-block;
+
+	width: 2em;
+
+  fill: currentColor;
+  stroke: currentColor;
+
+	transition: fill 200ms ease-in-out, stroke 200ms ease-in-out;
+}

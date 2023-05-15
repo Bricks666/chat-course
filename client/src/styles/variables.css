@@ -11,4 +11,7 @@
 		#60A9F6 0%,
 		var(--color-primary) 100%
 	);
+
+  --shadow: 0px 8px 15px rgb(42 39 242 / 7%);
+  --shadow-active: 0px 8px 15px rgb(42 39 242 / 20%)
 }
